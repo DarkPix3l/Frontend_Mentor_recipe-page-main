@@ -150,8 +150,6 @@ tr td:nth-child(2) {
   text-decoration: none;
 }
 
-    
-.attribution{
 @media (max-width: 480px) {
   main {
     width: 100%;
