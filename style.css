@@ -28,14 +28,21 @@ html{
 }
 
 body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     background-color: var(--Rose-50);
-    height:100vh;
 }
 
 main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 80%;
+    max-width: 700px;
+    padding: 24px 32px;
+    background-color: hsl(0, 0%, 100%);
+    margin: 50px 0;
 }
 
 h1{
@@ -43,19 +50,19 @@ h1{
     margin: var(--default-margin) 0;
 }
 
-h2 { margin-bottom: var(--default-margin);}
+h2{ margin-bottom: var(--default-margin);}
 
-h1, h2 {
+h1, h2{
     font-family: "Young Serif", serif;
     font-weight: 400;
 }
 
-h4 {
+h4{
     margin-bottom: 15px;
     color: var(--Rose-800);
 }
 
-ul {
+ul{
     line-height: 30px;
     margin-left: 20px;
 }
@@ -71,19 +78,11 @@ hr{
     border: 1px solid var(--Stone-150);
 }
 
-#recipeCard, #recipeCard img, .callout {
+main, main >img, .callout {
     border-radius: 20px;
 }
 
-#recipeCard{
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    max-width: 700px;
-    padding: 24px 32px;
-    background-color: hsl(0, 0%, 100%);
-    
-}
+main img{ width: 100%; }
 
 .callout{
     background-color: var(--Rose-50);
@@ -91,9 +90,57 @@ hr{
     margin-top: var(--default-margin);
 }
 
+#nutrition p{ margin-bottom: var(--default-margin); }
 
+table{ width: 100%; }
 
+td{
+    height: 50px;
+    border-bottom: 1px solid var(--Stone-150);
+}
 
+tr td:nth-child(2){ color: var(--Brown-800); }
 
-/* .attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); } */
+.attribution { 
+    font-size: 12px; 
+    text-align: center;
+    height: 50px;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+    text-decoration: none;
+}
+
+@media (max-width: 480px) {
+    
+    main{
+        width: 100%;
+        padding-top: 0;
+    }
+
+    main img{
+        border-radius: 0;
+        width: 126%;
+    }
+    .attribution{
+        display: none;
+    }  
+}
+
+@media (max-width: 375px) {
+    
+    main{
+        width: 100%;
+        padding-top: 0;
+    }
+
+    main img{
+        border-radius: 0;
+        width: 100vw;
+    }
+
+    .attribution{
+        display: none;
+    }
+}
